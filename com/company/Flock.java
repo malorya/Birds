@@ -12,8 +12,8 @@ public class Flock
     {
         System.out.println("Введите 1 для нового попугая, 2 для нового пингвина, 3 для нового воробья и 0 для выхода");
         f = new ArrayList<Bird>();
-        Scanner in = new Scanner(System.in);
         int choose;
+        Scanner in = new Scanner(System.in);
         do
         {
             choose = in.nextInt();
@@ -34,6 +34,7 @@ public class Flock
                     break;
             }
         }
+
         while (choose != 0);
     }
     public void draw(Graphics g)

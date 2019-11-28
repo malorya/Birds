@@ -1,6 +1,9 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
+    public static int x = 0, y =0;
 
     public static void main(String[] args) {
 	    /*Bird bird1 = new Bird();
@@ -26,10 +29,15 @@ public class Main {
         spar2.printName();
         spar1.fly();
         spar2.tweet();*/
+        System.out.println("Введите координаты начала ветки для попугаев");
+        Scanner in = new Scanner(System.in);
+        x = in.nextInt();
+        y = in.nextInt();
         Flock f = new Flock();
         Bird bird1 = new Parrot();
         bird1.time();
-        Window k = new Window(f);
+        //Передаём стаю и точку начала ветки в окно
+        Window k = new Window(f,x,y);
     }
 
 }

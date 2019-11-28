@@ -5,7 +5,7 @@ import sun.util.calendar.LocalGregorianCalendar;
 
 import java.awt.*;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
+
 
 public abstract class Bird
 {
@@ -47,22 +47,24 @@ public abstract class Bird
     }
     public void time()
     {
-       int hours = Calendar.getInstance().getTime().getHours();
-       if (hours >= 6 && hours < 12)
-       {
-           System.out.println("Сейчас " + hours + " часов. " + "Доброе утро!");
-       }
-       if (hours >= 12 && hours < 17)
+        int hours = Calendar.getInstance().getTime().getHours();
+        if (hours >= 6 && hours < 12)
         {
-            System.out.println("Сейчас " + hours + " часов. " + "Добрый день!");
-        }
-        if (hours >= 17 && hours < 23)
+            System.out.println(Calendar.getInstance().getTime()+" Сейчас " + hours + " часов. " + "Доброе утро!");
+    }
+        if (hours >= 12 && hours < 17)
         {
-            System.out.println("Сейчас " + hours + " часов. " + "Добрый вечер!");
+            System.out.println(Calendar.getInstance().getTime()+" Сейчас " + hours + " часов. " + "Добрый день!");
         }
+        if (hours >= 17 && hours < 24)
+        {
+            System.out.println(Calendar.getInstance().getTime()+" Сейчас " + hours + " часов. " + "Добрый вечер!");
+        }
+
         if (hours >= 23 && hours < 6)
         {
-            System.out.println("Сейчас " + hours + " часов. " + "Уже ночь!!!");
+            System.out.println(Calendar.getInstance().getTime() +" Сейчас " + hours + " часов. " + "Уже ночь!!!");
         }
+        System.out.println("Количество птиц = " + KOL);
     }
 }
